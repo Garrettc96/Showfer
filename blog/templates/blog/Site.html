@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+{% load staticfiles %}
+<script src="{% static "js/jquery.js" %}"></script>
+<script src="{% static "js/blog-ajax.js" %}"></script>
+<script src="{% static "js/jquery.cookie.js" %}"></script>
+
+<link rel="stylesheet" type="text/css" href="{% static 'Style.css' %}" />
+</head>
+<body>
+	<div id = "background"> 
+
+	</div>
+	<div id = "top"> </div>
+	
+	<form id = "search" enctype='multipart/form-data' name = "search">
+		{% csrf_token %}
+			
+	<input id = "searchin" placeholder = "Search!" type = "text" name = "searchin" required>
+	<button id = "action" type = "submit"> Search!	</button>
+	</form>
+	<div id = "cards"> 
+		
+	</div>	
+	
+</body>
+
+</html>

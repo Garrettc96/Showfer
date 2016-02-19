@@ -1,0 +1,24 @@
+<html>
+
+<head>
+
+{% load staticfiles %}
+<script src="{% static "js/jquery.js" %}"></script>
+<script src="{% static "js/blog-ajax.js" %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'Style.css' %}" />
+</head>
+<body>
+	<div id = "background"> 
+
+	</div>
+	<h1> Welcome </h1>
+	<form action="{% url 'anime'%}" id = "search" name = "searchbox" method = "post">
+		{% csrf_token %}
+		
+	<input id = "search" type = "text" name = "search" required>
+	<button> Search!	</button>
+	</form>
+	
+</body>
+
+</html>

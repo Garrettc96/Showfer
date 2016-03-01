@@ -18,7 +18,7 @@ $( document ).ready(function() {
         });
         event.preventDefault();
         $.ajax({
-        url: "http://localhost:8000/Anime/new/",
+        url: "http://showfer.tv/Anime/new/",
         type: 'post', 
         dataType: "json",
         data: {name: obj.val()},
@@ -77,7 +77,7 @@ $( document ).ready(function() {
                div.appendChild(pic);
                //Setting up picture of show
                pic.style.position = "absolute";
-               test2 = "http://localhost:8000/blog/media/" + show.fields.image;
+               test2 = "http://showfer.tv/blog/media/" + show.fields.image.replace(".jpeg","_.jpeg");
                console.log(test2);
                $(pic).append('<img src="' + test2 +'"height = "80%" width = "130%"">');
                $(pic).children().css({"margin-top": "15%",
@@ -87,7 +87,7 @@ $( document ).ready(function() {
                $(name).text(show.fields.title);
                name.style.position = "absolute";
                name.style.textAlign = "center";
-               name.style.fontSize = '175%';
+               name.style.fontSize = '1.2 rem';
                name.style.color = 'rgb(255,179,56)';
                name.style.marginLeft = "10%";
                name.style.marginTop = "0%";
@@ -97,7 +97,7 @@ $( document ).ready(function() {
                   var site = document.createElement('div');
                   div.appendChild(site);
                   console.log(places[i] + places.length)
-                  var netpic = "http://localhost:8000/blog/media/logos/" + places[i] + ".png";
+                  var netpic = "http://showfer.tv/blog/media/logos/" + places[i] + ".png";
                   $(site).append('<img src="' + netpic +'"height = "15%" width = "25%"">');
                   $(site).children().css({"margin-top": "130%",
                                           "margin-left": siteLeft + "%",

@@ -31,9 +31,9 @@ def animez(request):
     if request.method == "POST":
         print('rawr3')
         anim = Anime()
-        f = open('shows', 'rw')
-        changeFile(request)
-        readFile(f, request)
+       # f = open('shows', 'rw')
+        #changeFile(request)
+        #readFile(f, request)
        # anim.findOnNetflix()
         test = anim.contains(request.POST.get('name'))
        
